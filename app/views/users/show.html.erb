@@ -1,0 +1,14 @@
+<div class="main user-show">
+  <div class="container">
+    <div class="user">
+      <h2><%= @user.name %></h2>
+      <p><%= @user.email %></p>
+      <p>クリアしたコース</p>
+      <%if @user.beginner%>
+
+      <h3>初級</h3>
+      <%end%>
+      <%= link_to("編集", "/users/#{@user.id}/edit") %>
+    </div>
+  </div>
+</div>

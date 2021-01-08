@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>問題１</h1>
+    <p>変数aとbの演算の出力を答えましょう。</p>
+    <h2>コード</h2>
+    <p>
+      #変数の定義<br>
+      a=5<br>
+      b=16<br>
+      puts a+b この出力結果は？
+    </p>
+
+<form name="formChecker">
+  <input type="radio" name="rbtn" value="12"> 11
+  <input type="radio" name="rbtn" value="8" checked> 21
+  <input type="radio" name="rbtn" value="-4" checked> 5
+  <input type="button" value="送信" onClick="check()">
+</form>
+<div class="fuseikai" id="fusei">不正解</div>
+<div class="seikai" id="sei">正解</div>
+<input class="modoru" id="modore"type="button" value="戻る" onClick="check_button()">
+<style>
+
+  .fuseikai {
+
+    margin-top: 0.5rem;
+
+    padding: 1rem;
+
+    background-color: #E3E6E9;
+
+    border: 1px dotted #000;
+
+    opacity: 0;
+
+    width: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .modoru {
+
+    margin-top: 0.5rem;
+
+    padding: 1rem;
+
+    background-color: #E3E6E9;
+
+    border: 1px dotted #000;
+
+    opacity: 0;
+
+    width: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .seikai {
+
+    margin-top: 0.5rem;
+
+    padding: 1rem;
+
+    background-color: #E3E6E9;
+
+    border: 1px dotted #000;
+
+    opacity: 0;
+
+    width: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+</style>
+
+<script type="text/javascript">
+  function check() {
+    var rcheck = document.formChecker.rbtn[1].checked; //ラジオボタンrbtnの１つ目（rbtn[0]）の状態を取得
+    //rcheckの内容がtrue（ボタンが押されている状態）かどうかで条件分岐
+    if (rcheck) { //tureの場合
+      document.location = "/problem_2"; //リンク先を呼び出す
+      document.getElementById('sei').style.opacity="1";
+
+    } else { //falseの場合
+      document.getElementById('fusei').style.opacity="1";
+      document.getElementById('modore').style.opacity="1";
+      //アラートを表示する
+    }
+  }
+  function check_button(){
+    document.location="/problem";
+  }
+
+</script>
+  </body>
+</html>

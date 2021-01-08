@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>問題１</h1>
+    <p>変数aとbの演算の出力を答えましょう。</p>
+    <h2>コード</h2>
+    <p>
+      #変数の定義<br>
+      a=2<br>
+      b=6<br>
+      puts a*b この出力結果は？
+    </p>
+
+<form name="formChecker">
+  <input type="radio" name="rbtn" value="12"> 12
+  <input type="radio" name="rbtn" value="8" checked> 8
+  <input type="radio" name="rbtn" value="-4" checked> -4
+  <input type="button" value="送信" onClick="check()">
+  <%= form.check_box()%>
+</form>
+<div class="fuseikai" id="fusei">不正解</div>
+<div class="seikai" id="sei">正解</div>
+<style>
+
+  .fuseikai {
+
+    margin-top: 0.5rem;
+
+    padding: 1rem;
+
+    background-color: #E3E6E9;
+
+    border: 1px dotted #000;
+
+    opacity: 0;
+
+    width: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .seikai {
+
+    margin-top: 0.5rem;
+
+    padding: 1rem;
+
+    background-color: #E3E6E9;
+
+    border: 1px dotted #000;
+
+    opacity: 0;
+
+    width: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+</style>
+
+<script type="text/javascript">
+  function check() {
+    var rcheck = document.formChecker.rbtn[0].checked; //ラジオボタンrbtnの１つ目（rbtn[0]）の状態を取得
+    //rcheckの内容がtrue（ボタンが押されている状態）かどうかで条件分岐
+    if (rcheck) { //tureの場合
+      document.location = "/problem_2"; //リンク先を呼び出す
+      document.getElementById('sei').style.opacity="1";
+      #rubyのコードを書くとおかしくなる
+      #rubyの中で条件分布をしたい
+    } else { //falseの場合
+      document.getElementById('fusei').style.opacity="1";
+
+
+      //アラートを表示する
+    }
+  }
+
+</script>
+  </body>
+</html>

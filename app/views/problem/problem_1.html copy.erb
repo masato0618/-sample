@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>問題１</h1>
+    <p>変数aとbの演算の出力を答えましょう。</p>
+    <h2>コード</h2>
+    <p>
+      #変数の定義<br>
+      a=2<br>
+      b=6<br>
+      puts a*b この出力結果は？
+    </p>
+
+<form name="formChecker">
+  <input type="radio" name="rbtn" value="12"> 12
+  <input type="radio" name="rbtn" value="8" checked> 8
+  <input type="radio" name="rbtn" value="-4" checked> -4
+  <input type="button" value="送信" onClick="check1()">
+</form>
+#<div class="fuseikai" id="fusei">不正解</div>
+#<div class="seikai" id="sei">正解</div>
+=begin<style>
+
+  .fuseikai {
+
+    margin-top: 0.5rem;
+
+    padding: 1rem;
+
+    background-color: #E3E6E9;
+
+    border: 1px dotted #000;
+
+    opacity: 0;
+
+    width: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .seikai {
+
+    margin-top: 0.5rem;
+
+    padding: 1rem;
+
+    background-color: #E3E6E9;
+
+    border: 1px dotted #000;
+
+    opacity: 0;
+
+    width: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+</style>
+=end
+
+<script type="text/javascript">
+  function check1() {
+    var rcheck = document.formChecker.rbtn[0].checked; //ラジオボタンrbtnの１つ目（rbtn[0]）の状態を取得
+    //rcheckの内容がtrue（ボタンが押されている状態）かどうかで条件分岐
+    if (rcheck) { //tureの場合
+       //リンク先を呼び出す
+      #document.getElementById('sei').style.opacity="1";
+      redirect_to("/problem_2")
+      <% flash[:notice] = "正解" %>
+
+    } else { //falseの場合
+      #document.getElementById('fusei').style.opacity="1";
+      <% flash[:notice] = "不正解" %>
+    }
+  }
+
+</script>
+  </body>
+</html>
